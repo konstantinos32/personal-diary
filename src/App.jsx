@@ -1,10 +1,11 @@
 import EntryBtn from "./components/EntryBtn";
 import AddEntryForm from "./components/AddEntryForm";
 import HomepageList from "./components/HomepageList";
+import ViewEntryModal from "./components/ViewEntryModal";
 import { useEntries } from "./context/EntriesContext";
 
 const App = () => {
-  const { showAddEntryForm } = useEntries();
+  const { showAddEntryForm, showEntryModal } = useEntries();
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -21,6 +22,8 @@ const App = () => {
       </main>
 
       {showAddEntryForm && <AddEntryForm />}
+
+      {showEntryModal && <ViewEntryModal />}
     </div>
   );
 };
