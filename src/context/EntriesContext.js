@@ -1,7 +1,9 @@
-import {createContext, useContext} from 'react';
+import { createContext, useContext } from 'react';
 
-export const EntriesContext= createContext();
+const EntriesContext = createContext();
 
-export const useEntriesContext = () => {
-    return useContext(EntriesContext);
+const useEntries = () => {
+  return useContext(EntriesContext);
 };
+
+export { EntriesContext, useEntries };
