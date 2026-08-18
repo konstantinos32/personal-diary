@@ -1,11 +1,10 @@
-import EntryBtn from './components/EntryBtn';
-import AddEntryForm from './components/AddEntryForm';
-import { useEntries } from './context/EntriesContext';
+import EntryBtn from "./components/EntryBtn";
+import AddEntryForm from "./components/AddEntryForm";
+import HomepageList from "./components/HomepageList";
+import { useEntries } from "./context/EntriesContext";
 
 const App = () => {
-  const {
-    showAddEntryForm,
-  } = useEntries();
+  const { showAddEntryForm } = useEntries();
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -18,9 +17,7 @@ const App = () => {
       </header>
 
       <main className="mx-auto max-w-6xl p-6">
-        <p className="text-slate-600">
-          Your diary entries will appear here.
-        </p>
+        <HomepageList />
       </main>
 
       {showAddEntryForm && <AddEntryForm />}
