@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'entries';
+const STORAGE_KEY = "entries";
 
 export const getEntries = () => {
   const storedEntries = localStorage.getItem(STORAGE_KEY);
@@ -16,7 +16,7 @@ export const storeEntries = (entries) => {
 
 export const removeEntry = (entries, entryToRemove) => {
   const filteredEntries = entries.filter(
-    (entry) => entry !== entryToRemove
+    (entry) => entry.id !== entryToRemove.id,
   );
 
   storeEntries(filteredEntries);
@@ -26,7 +26,7 @@ export const removeEntry = (entries, entryToRemove) => {
 
 export const updateEntry = (entries, entryToUpdate) => {
   const updatedEntries = entries.map((entry) =>
-    entry.id === entryToUpdate.id ? entryToUpdate : entry
+    entry.id === entryToUpdate.id ? entryToUpdate : entry,
   );
 
   storeEntries(updatedEntries);
