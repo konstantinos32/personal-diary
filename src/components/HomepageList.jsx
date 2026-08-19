@@ -29,18 +29,19 @@ const HomepageList = () => {
   }
 
   if (sortedEntries.length === 0) {
-    return (
-      <div className="py-12 text-center">
-        <p className="text-lg text-slate-500">
-          You don't have any diary entries yet.
-        </p>
+  return (
+    <div className="rounded-2xl bg-white px-6 py-16 text-center shadow-sm">
+      <h2 className="text-2xl font-bold text-slate-900">
+        No diary entries yet
+      </h2>
 
-        <p className="mt-2 text-slate-400">
-          Click "Add Entry" to create your first entry.
-        </p>
-      </div>
-    );
-  }
+      <p className="mt-3 text-slate-500">
+        Start documenting your day by creating your first
+        diary entry.
+      </p>
+    </div>
+  );
+}
 
   return (
     <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

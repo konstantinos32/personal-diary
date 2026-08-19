@@ -9,15 +9,23 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-100">
-      <header className="flex items-center justify-between border-b bg-white px-6 py-4 shadow-sm">
-        <h1 className="text-2xl font-bold text-slate-900">
-          Personal Diary
-        </h1>
+      <header className="border-b bg-white shadow-sm">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <div>
+            <h1 className="text-3xl font-bold text-slate-900">
+              Personal Diary
+            </h1>
 
-        <EntryBtn />
+            <p className="mt-1 text-sm text-slate-500">
+              Your memories, one day at a time.
+            </p>
+          </div>
+
+          <EntryBtn />
+        </div>
       </header>
 
-      <main className="mx-auto max-w-6xl p-6">
+      <main className="mx-auto max-w-6xl px-6 py-10">
         <HomepageList />
       </main>
 
